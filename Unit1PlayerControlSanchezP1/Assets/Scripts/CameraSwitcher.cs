@@ -15,7 +15,15 @@ public class CameraSwitcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C) && CockpitCamera.activeInHierarchy == true)
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            CockpitCamera.SetActive(true);
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            CockpitCamera.SetActive(false);
+        }
+       /* if (Input.GetKeyDown(KeyCode.C) && CockpitCamera.activeInHierarchy == true)
         { 
             CockpitCamera.SetActive(false);
             //MainCamera.SetActive(true);
@@ -25,6 +33,6 @@ public class CameraSwitcher : MonoBehaviour
         {
             CockpitCamera.SetActive(true);
             //MainCamera.SetActive(false);
-        }
+        }*/
     }
 }
